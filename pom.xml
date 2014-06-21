@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.beethere.weng</groupId>
     <artifactId>weng-hive</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>Weng::Hive</name>
-    <url>http://weng.beethere.com</url>
+    <url>https://github.com/beethere/weng</url>
 
     <properties>
         <scala.version>2.10</scala.version>
@@ -24,6 +24,10 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <modules>
+        <module>weng-messenger</module>
+    </modules>
 
     <dependencies>
     </dependencies>
