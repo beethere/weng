@@ -11,6 +11,8 @@
     <url>https://github.com/beethere/weng</url>
 
     <properties>
+        <jsr305.version>2.0.3</jsr305.version>
+        <javax.annotation.version>1.2</javax.annotation.version>
         <scala.version>2.10</scala.version>
         <akka.version>2.3.3</akka.version>
     </properties>
@@ -21,6 +23,16 @@
                 <groupId>com.typesafe.akka</groupId>
                 <artifactId>akka-actor_${scala.version}</artifactId>
                 <version>${akka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>javax.annotation-api</artifactId>
+                <version>${javax.annotation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>jsr305</artifactId>
+                <version>${jsr305.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
