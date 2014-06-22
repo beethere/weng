@@ -4,6 +4,7 @@
 package com.beethere.weng.messenger.ecosystem;
 
 import akka.actor.UntypedActor;
+import com.beethere.weng.messenger.message.api.IHoneyMessage;
 
 /**
  * Worker Bees for collecting honey.
@@ -11,8 +12,14 @@ import akka.actor.UntypedActor;
  */
 public class WorkerBee extends UntypedActor {
 
-    @Override
-    public void onReceive(Object o) throws Exception {
 
+    @Override
+    public void onReceive(Object message) throws Exception {
+        if(message instanceof IHoneyMessage){
+
+        }
     }
+
+
+
 }

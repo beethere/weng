@@ -11,10 +11,11 @@
     <url>https://github.com/beethere/weng</url>
 
     <properties>
+        <akka.version>2.3.3</akka.version>
+        <guava.version>17.0</guava.version>
         <jsr305.version>2.0.3</jsr305.version>
         <javax.annotation.version>1.2</javax.annotation.version>
         <scala.version>2.10</scala.version>
-        <akka.version>2.3.3</akka.version>
     </properties>
 
     <dependencyManagement>
@@ -33,6 +34,12 @@
                 <groupId>com.google.code.findbugs</groupId>
                 <artifactId>jsr305</artifactId>
                 <version>${jsr305.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

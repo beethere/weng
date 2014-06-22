@@ -3,9 +3,12 @@
  */
 package com.beethere.weng.messenger.message;
 
+import com.beethere.weng.messenger.ecosystem.Flower;
 import com.beethere.weng.messenger.message.api.IHoneyMessage;
+import com.beethere.weng.messenger.message.api.Location;
 
 import javax.annotation.concurrent.Immutable;
+import java.util.Date;
 
 /**
  * Simple text honey message.
@@ -23,11 +26,17 @@ public class TextHoneyMessage implements IHoneyMessage {
 
     private final long timestamp;
 
-    public TextHoneyMessage(String messageId, String creator, String message, long timestamp) {
+    private final Location location;
+
+    private final Flower hopeFlower;
+
+    public TextHoneyMessage(String messageId, String creator, String message, Flower hopeFlower, Location location) {
         this.messageId = messageId;
         this.message = message;
-        this.timestamp = timestamp;
+        this.timestamp = new Date().getTime();
         this.creator = creator;
+        this.hopeFlower = hopeFlower;
+        this.location = location;
     }
 
 
@@ -49,5 +58,15 @@ public class TextHoneyMessage implements IHoneyMessage {
     @Override
     public Object body() {
         return message;
+    }
+
+    @Override
+    public Flower hopeFlower() {
+        return hopeFlower;
+    }
+
+    @Override
+    public Location location() {
+        return location;
     }
 }

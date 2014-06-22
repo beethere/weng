@@ -6,10 +6,10 @@ package com.beethere.weng.messenger.ecosystem;
 import akka.actor.UntypedActor;
 
 /**
- * Messenger bee for delivering honey message.
  * @author Jian TANG
  */
-public class MessengerBee extends UntypedActor{
+public class Gardener extends UntypedActor {
+
 
     @Override
     public void onReceive(Object o) throws Exception {

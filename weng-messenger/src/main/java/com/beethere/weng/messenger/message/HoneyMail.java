@@ -6,13 +6,14 @@ package com.beethere.weng.messenger.message;
 import com.beethere.weng.messenger.message.api.IHoneyMessage;
 
 import javax.annotation.concurrent.Immutable;
+import java.io.Serializable;
 
 /**
  * Honey Mail
  * @author Jian TANG
  */
 @Immutable
-public class HoneyMail {
+public class HoneyMail implements Serializable {
 
     /**
      * Mail sender Bee ID;

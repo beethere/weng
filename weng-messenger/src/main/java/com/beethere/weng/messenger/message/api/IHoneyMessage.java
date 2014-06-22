@@ -3,10 +3,14 @@
  */
 package com.beethere.weng.messenger.message.api;
 
+import com.beethere.weng.messenger.ecosystem.Flower;
+
+import java.io.Serializable;
+
 /**
  * @author Jian TANG
  */
-public interface IHoneyMessage {
+public interface IHoneyMessage extends Serializable {
 
     public String messageId();
 
@@ -15,4 +19,8 @@ public interface IHoneyMessage {
     public String creator();
 
     public Object body();
+
+    Flower hopeFlower();
+
+    Location location();
 }
