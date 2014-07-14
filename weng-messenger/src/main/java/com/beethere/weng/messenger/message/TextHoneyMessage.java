@@ -69,4 +69,6 @@ public class TextHoneyMessage implements IHoneyMessage {
     public Location location() {
         return location;
     }
+
+
 }

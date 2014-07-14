@@ -28,7 +28,7 @@ public class LeaderBee extends UntypedActor{
 
     public LeaderBee(Hive hive) {
         this.hive = hive;
-        List<Routee> workerBees = new ArrayList<>();
+        List<Routee> workerBees = new ArrayList<Routee>();
         for (int i = 0; i < 5; i++) {
             ActorRef r = getContext().actorOf(Props.create(WorkerBee.class, hive));
             getContext().watch(r);
